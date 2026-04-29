@@ -2,53 +2,27 @@ import java.util.*;
 
 class Solution {
     public int solution(int[] priorities, int location) {
-        
-        int count = 0;
-        Deque<Integer> queue = new ArrayDeque<>();
-        
-        for(int i = 0 ; i < priorities.length ; i++){
-            queue.addLast(priorities[i]);            
+        int answer = 1;
+        PriorityQueue p = new PriorityQueue<>(Collections.reverseOrder());;
+
+        for(int i=0; i<priorities.length; i++){
+            p.add(priorities[i]);
+            System.out.println(p);
         }
-        
-//         int size = queue.size();
-//          for(int i = 0 ; i < size ; i++){
-//             System.out.println(queue.removeFirst());         
-//         }
-        
-        while(true){
-            int target = queue.removeFirst();
-            boolean flag = false;
-    
-            // for(int value : queue){
-            //     System.out.print(value);
-            // }
-            // System.out.println();
-            
-            for(int i = 9 ; i > target ; i--){
-                if(queue.contains(i)){
-                    if(location == 0){
-                        location = queue.size();
-                        queue.addLast(target);
-                        flag = true;
-                        break;
-                    }else{
-                        location--;
-                        queue.addLast(target);
-                        flag = true;
-                        break;
+        System.out.println(p);
+
+        while(!p.isEmpty()){
+            for(int i=0; i<priorities.length; i++){
+                if(priorities[i] == (int)p.peek()){
+                    if(i == location){
+                        return answer;
                     }
+                    p.poll();
+                    answer++;
                 }
             }
-            if(flag) continue;
-            
-            if(location == 0){
-                count++;
-                return count;
-            }else{
-                location--;
-                count++;
-             }
-    
         }
+
+        return answer;
     }
 }
