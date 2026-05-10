@@ -1,10 +1,10 @@
 # [level 2] 전력망을 둘로 나누기 - 86971 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/86971) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/86971#) 
 
 ### 성능 요약
 
-메모리: 81.7 MB, 시간: 10.20 ms
+메모리: 74.4 MB, 시간: 0.22 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2026년 05월 10일 13:40:41
+2026년 05월 10일 13:42:25
 
 ### 문제 설명
 
