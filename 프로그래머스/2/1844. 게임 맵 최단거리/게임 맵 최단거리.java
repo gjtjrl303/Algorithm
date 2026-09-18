@@ -33,8 +33,9 @@ class Solution {
                
             for(int i = 0; i < 4; i++){
                 if(canGo(now.x + goX[i], now.y + goY[i])){
-                    isVisited[now.x + goX[i]][now.y + goY[i]] = true;
+                 
                     queue.add(new Point(now.x + goX[i], now.y + goY[i], now.distance + 1));
+                    isVisited[now.x + goX[i]][now.y + goY[i]] = true;
                    
                 }
             }    
