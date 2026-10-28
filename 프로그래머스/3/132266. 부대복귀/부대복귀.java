@@ -21,13 +21,6 @@ class Solution {
             endNode.addEdge(startNode);  
         }
         
-//         for(int i = 0 ; i < graph.size() ; i++){
-//             Node node = graph.get(i);
-//             System.out.println(node.getValue());
-//             List<Node> edges = node.getEdges();
-//             System.out.println(edges);
-//         }
-        
         for(int i = 0 ; i < sources.length ; i++){
             answer[i] = bfs(sources[i], destination);
         }
@@ -48,9 +41,7 @@ class Solution {
             
             for(int i = 0 ; i < size ; i++){
                 Node currentNode = queue.poll();
-                // System.out.println(currentNode + " " + destination);
                 if(currentNode.getValue() == destination){
-                    // System.out.println("11111111111 = " + count);
                     return count;
                 } 
                 List<Node> edges = currentNode.getEdges();
@@ -61,10 +52,7 @@ class Solution {
                 }
             }
             count++;
-            
-            // System.out.println(count);
         }
-        
         return -1;    
     }
     
