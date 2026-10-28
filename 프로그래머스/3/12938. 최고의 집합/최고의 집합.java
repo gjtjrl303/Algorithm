@@ -10,7 +10,7 @@ class Solution {
         
         int[] numbers = new int[numberCount];
         
-        for(int i = numberCount - 1; i >= 0; i--){
+        for(int i = 0; i < n; i++){
             if(remain > 0){
                 numbers[i] = number + 1;
                 remain--;
@@ -18,6 +18,8 @@ class Solution {
                numbers[i] = number; 
             } 
         }
+        
+        Arrays.sort(numbers);
         
         return numbers;
     }
