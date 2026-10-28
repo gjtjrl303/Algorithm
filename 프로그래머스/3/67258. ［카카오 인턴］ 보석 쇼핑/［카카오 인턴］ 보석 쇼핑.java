@@ -28,11 +28,6 @@ class Solution {
             if(map.size() == count){                                
                 int end = map.lastEntry().getValue();
                 int start = map.firstEntry().getValue();
-        
-                // for(String key : map.keySet()){
-                //     System.out.print(map.get(key) + " ");
-                // }
-                // System.out.println();
                 
                 if(end - start < minSize){
                     minSize = end - start;
