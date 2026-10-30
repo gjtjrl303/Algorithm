@@ -21,11 +21,6 @@ class Solution {
             pay(map.get(seller[i]), amount[i] * 100);
         }        
         
-        // for(String key : map.keySet()){
-        //     Node node = map.get(key);
-        //     System.out.println(node + " " + node.getParent() + " " + node.getPrice());
-        // }
-        
         int[] result = new int[enroll.length];
         for(int i = 0 ; i < enroll.length ; i++) {
             result[i] = map.get(enroll[i]).getPrice();
@@ -60,24 +55,12 @@ class Solution {
             this.price += price;
         }
         
-        public void addChild(Node node){
-            children.add(node);
-        }
-        
-        public List<Node> getChilren(){
-            return children;
-        }
-        
         public Node getParent(){
             return parent;
         }
         
         public int getPrice(){
             return price;
-        }
-        
-        private void plusPay(int pay){
-            pay += pay;
         }
         
         public void payCharge(int pay){
